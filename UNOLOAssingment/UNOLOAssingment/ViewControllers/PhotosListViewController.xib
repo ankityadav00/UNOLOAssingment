@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotosListViewController" customModule="UNOLOAssingment" customModuleProvider="target">
+            <connections>
+                <outlet property="emptyStateView" destination="w1G-cw-kBq" id="OIR-Js-h8C"/>
+                <outlet property="tableView" destination="HPs-K6-Hjf" id="MQi-09-Y8v"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HPs-K6-Hjf">
+                    <rect key="frame" x="0.0" y="118" width="393" height="734"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1G-cw-kBq">
+                    <rect key="frame" x="76" y="311" width="241" height="230"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAf-OL-3J7">
+                            <rect key="frame" x="16" y="31.333333333333314" width="209" height="27.666666666666671"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pull to refresh to load photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxt-DP-NWz">
+                            <rect key="frame" x="16" y="0.0" width="209" height="19.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.on.rectangle.angled" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GQz-IW-lK1">
+                            <rect key="frame" x="80.666666666666657" y="75" width="80" height="79.333333333333343"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="Kdb-7q-Y2h"/>
+                                <constraint firstAttribute="height" constant="80" id="RYS-bw-01y"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="GQz-IW-lK1" firstAttribute="top" secondItem="QAf-OL-3J7" secondAttribute="bottom" constant="16" id="MTm-vi-MXw"/>
+                        <constraint firstAttribute="trailing" secondItem="QAf-OL-3J7" secondAttribute="trailing" constant="16" id="OQm-ZA-ZMy"/>
+                        <constraint firstItem="QAf-OL-3J7" firstAttribute="top" secondItem="rxt-DP-NWz" secondAttribute="bottom" constant="12" id="RN7-lu-ymv"/>
+                        <constraint firstAttribute="trailing" secondItem="rxt-DP-NWz" secondAttribute="trailing" constant="16" id="W9v-3x-ByO"/>
+                        <constraint firstItem="rxt-DP-NWz" firstAttribute="top" secondItem="w1G-cw-kBq" secondAttribute="top" id="pw5-QK-oQk"/>
+                        <constraint firstItem="GQz-IW-lK1" firstAttribute="centerY" secondItem="w1G-cw-kBq" secondAttribute="centerY" id="r1D-oA-3Ut"/>
+                        <constraint firstItem="GQz-IW-lK1" firstAttribute="centerX" secondItem="w1G-cw-kBq" secondAttribute="centerX" id="sTt-Z5-mF3"/>
+                        <constraint firstItem="rxt-DP-NWz" firstAttribute="leading" secondItem="w1G-cw-kBq" secondAttribute="leading" constant="16" id="sfa-iy-jQU"/>
+                        <constraint firstItem="QAf-OL-3J7" firstAttribute="leading" secondItem="w1G-cw-kBq" secondAttribute="leading" constant="16" id="zFV-M8-47e"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="w1G-cw-kBq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="AA0-D2-xhI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HPs-K6-Hjf" secondAttribute="trailing" id="UVA-Oo-x4A"/>
+                <constraint firstItem="HPs-K6-Hjf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YTz-Rq-3Cc"/>
+                <constraint firstItem="w1G-cw-kBq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h9V-BD-1wP"/>
+                <constraint firstAttribute="bottom" secondItem="HPs-K6-Hjf" secondAttribute="bottom" id="nSt-2P-osi"/>
+                <constraint firstItem="HPs-K6-Hjf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="q2N-HI-0BD"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="120.42253521126761"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="98"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
